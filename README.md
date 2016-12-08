@@ -68,3 +68,5 @@ A living guide for the CMI Front-end applications. This mini application provide
 - local "production" build with e2e tests to ensure uglify does not break anything
 - better production build with no comments
 - understand babels tranpilations settings
+- explore if yarn is helpful
+- output a vendors script and put in page
