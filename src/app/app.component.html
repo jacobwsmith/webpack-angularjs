@@ -1,0 +1,50 @@
+<div class="guide" >
+
+	<div class="guide__menu">
+		<div class="guide__menu__icon"  ng-click="$ctrl.open();">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</div>
+		<div class="guide__menu__logo">
+			<img ng-src="{{::$ctrl.logo}}"/>
+		</div>
+		<div class="guide__menu_title">
+			Guide for Front-end Development
+		</div>
+	</div>
+
+	<!-- Guide Nav -->
+	<!-- ng-class="{strike: deleted}" -->
+	<div class="guide__nav" ng-click="$ctrl.close();" ng-class="{'guide__nav-show': $ctrl.isOpened}">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="guide__nav__logo">
+						<img ng-src="{{::$ctrl.logo}}"/>
+					</div>
+					<ul class="guide__nav__list">
+						<li><a ui-sref="overview" ui-sref-active="guide__nav__active">Overview</a></li>
+						<li>
+							<a ui-sref="styles" ui-sref-active="guide__nav__active">Styles</a>
+							<ul>
+								<li><a ui-sref="type" ui-sref-active="guide__nav__active">Type</a></li>
+								<li><a ui-sref="grid" ui-sref-active="guide__nav__active">Grid</a></li>
+								<li><a ui-sref="buttons" ui-sref-active="guide__nav__active">Buttons</a></li>
+								<li><a ui-sref="tables" ui-sref-active="guide__nav__active">Tables</a></li>
+								<li><a ui-sref="forms" ui-sref-active="guide__nav__active">Forms</a></li>
+								<li><a ui-sref="modals" ui-sref-active="guide__nav__active">Modals</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Guide Content -->
+	<div class="guide__content">
+		<div ui-view>Loading Route...</div>
+	</div>
+
+</div>

@@ -1,0 +1,140 @@
+/*
+Static Nav
+*/
+// .guide {
+//     .guide__menu{
+//         display:none;
+//     }
+//     .guide__nav{
+//         width: 170px;
+//         float: left;
+//         padding-left: 0px;
+//         padding-right: 0px;
+//         background-color: #f7f7f7;
+//         margin: 0;
+//         padding: 0;
+//         padding-bottom: 9999px;
+//         margin-bottom: -9999px;
+//         overflow: hidden;
+
+//         .guide__nav__logo{
+//             width: 50px;
+//         }
+
+//         .guide__nav__active { 
+//             font-weight: bolder; 
+//         }
+//         .guide__nav__list{
+//             margin: 15px 0 15px 0;
+//             padding: 0;
+//             list-style: none;
+//             ul{
+//                 // list-style: none;
+//                 margin: 0;
+//                 padding:0 0 0 1.4em;
+//             }
+//         }
+//     }
+//     .guide__content{
+//         float: none;
+//         width: auto;
+//         overflow: hidden;
+//         padding-top: 15px;
+//         padding-bottom: 15px;
+//     }
+// }
+
+
+/* Responsvie Nav */
+.guide {
+    .guide__menu{
+        // border: solid black 3px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+        // background-color: #f7f7f7;
+        background-color: #313742;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        color: #f7f7f7;
+        z-index: 1020;
+        display: block;
+        height: 50px;
+        width: 100vw;
+
+        .guide__menu__icon{
+            cursor: pointer;
+            i{
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 16px;
+                height: 16px;
+                font-size: 20px;
+            }
+        }
+        .guide__menu__logo{
+            width: 28px;
+            float: right;
+            position: fixed;
+            left: 50px;
+            top:0;
+        }
+        .guide__menu_title{
+            top:15px;
+            left: 100px;
+            position: absolute;
+        }
+    }
+    .guide__nav{
+        width: 170px;
+        position: fixed;
+        z-index: 1030;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 9999px;
+        margin-bottom: -9999px;
+        // overflow: hidden;
+        display:none;
+
+        .guide__nav__logo{
+            width: 36px;
+        }
+
+        .guide__nav__active { 
+            font-weight: bolder; 
+        }
+        .guide__nav__list{
+            margin: 15px 0 15px 0;
+            padding: 0;
+            list-style: none;
+            ul{
+                // list-style: none;
+                margin: 0;
+                padding:0 0 0 1.4em;
+            }
+        }
+    }
+    .guide__nav::after{
+        content: " ";
+        background-color: black;
+        position: absolute;
+        opacity: .5;
+        top:0;
+        left: 170px;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    .guide__content{
+        float: none;
+        width: auto;
+        overflow: hidden;
+        padding-top: 75px;
+        padding-bottom: 15px;
+    }
+}
+.guide__nav-show{
+    display: block !important;
+}
