@@ -17,17 +17,17 @@ module.exports = (env) => {
             loaders: [
                 {
                     test: /\.(scss|css)$/,
-                    loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+                    loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
                 },
                 {
                     test: /\.js$/,
                     exclude: /(node_modules|htdocs)/,
-                    loaders: ['ng-annotate','babel?presets[]=es2015']
+                    loaders: ['ng-annotate-loader','babel-loader?presets[]=es2015']
                 },
                 {
                     test: /\.html$/,
                     exclude: /(node_modules|htdocs)/,
-                    loader: 'raw',
+                    loader: 'raw-loader',
                 },
                 {
                     test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

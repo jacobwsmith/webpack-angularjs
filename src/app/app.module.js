@@ -1,4 +1,7 @@
-import 'font-awesome-sass-loader';
+
+// Having problems, workaround for now
+// import 'font-awesome-sass-loader';
+require("style-loader!css-loader!sass-loader!./../../node_modules/font-awesome-sass-loader/font-awesome-sass-styles.loader!./../../node_modules/font-awesome-sass-loader/font-awesome-sass.config.js");
 
 import './../styles/entry.scss';
 
